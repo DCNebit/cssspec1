@@ -8,7 +8,8 @@
     03  Prefix-num      Pic XXX value "555".
     03  Last-four       Pic X(4)  value "1212".
  01   Formatted-Number      Pic X(14) value "(XXX) YYY-ZZZZ".
- 01   Formatted-Alternate   Pic X(14) value "(XXX) XXX-XXXX".
+ 01   Formatted-Alternate   Pic X(14) value " THIS IS SPARTA".
+ 01	  CCOUNT PIC 99 VALUE 00.
  Procedure Division.
  Start-of-program.
     Inspect Formatted-Number
@@ -26,4 +27,10 @@
         Replacing ALL "-" by "*".
 
     DISPLAY FORMATTED-ALTERNATE.
+   
+    Inspect FORMATTED-ALTERNATE Replacing Characters by "*".
+ 	Inspect FORMATTED-ALTERNATE
+ 		Converting "QWERTYUIOPASDFGHJKLZXCVBNM" 
+ 		TO "abcdefghijklmnopqrstuvwxyz".
+ 
     Stop Run.
